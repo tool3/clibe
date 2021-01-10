@@ -1,4 +1,4 @@
-# cli.any
+# clitron
 use any npm library as a cli
 
 # install
