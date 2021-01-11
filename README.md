@@ -1,4 +1,4 @@
-# clibe
+# clibe ⎇
 use any npm library as a cli
 
 # install
