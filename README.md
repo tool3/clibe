@@ -21,5 +21,13 @@ clibe 'lib-name' 'some-command' 'args' 'for' 'command'
 ```bash
 npx clibe 'gradient-string' 'teen' 'HELLO WORLD'
 ```
-
+output:   
 ![](./hello.png)
+
+```bash
+npx clibe 'voca' 'camelCase' 'hello world'
+```
+output:   
+```
+helloWorld
+```
