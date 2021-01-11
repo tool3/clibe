@@ -17,8 +17,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gradient-string": "^1.2.0",
-    "voca": "^1.4.0",
     "yargs": "^16.2.0"
   }
 }
