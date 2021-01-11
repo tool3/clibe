@@ -31,3 +31,11 @@ output:
 ```
 helloWorld
 ```
+
+```bash
+npx clibe 'moment' 'format' 'MMMM Do YYYY' 'h:mm:ss a' -i 
+```
+output:   
+```
+January 11th 2021
+```

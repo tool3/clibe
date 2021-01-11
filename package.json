@@ -14,8 +14,8 @@
     "library",
     "magic"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Tal Hayut",
+  "license": "MIT",
   "dependencies": {
     "yargs": "^16.2.0"
   }
