@@ -18,12 +18,14 @@ clibe 'lib-name' 'some-command' 'args' 'for' 'command'
 ```
 
 # example
+## gradient-string
 ```bash
 npx clibe 'gradient-string' 'teen' 'HELLO WORLD'
 ```
 output:   
 ![](./hello.png)
 
+## voca
 ```bash
 npx clibe 'voca' 'camelCase' 'hello world'
 ```
@@ -31,7 +33,7 @@ output:
 ```
 helloWorld
 ```
-
+## moment
 ```bash
 npx clibe 'moment' 'format' 'MMMM Do YYYY' 'h:mm:ss a' -i 
 ```
@@ -39,3 +41,5 @@ output:
 ```
 January 11th 2021
 ```
+
+...any other lib you can think of :)
