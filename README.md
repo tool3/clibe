@@ -1,26 +1,25 @@
-# clitron
+# clibe
 use any npm library as a cli
 
 # install
 ```bash
-npm install clitron -g
+npm install clibe -g
 ```
 or see usage below for running with `npx`
 
 
 # usage
 ```bash
-npx clitron <lib-name> [command] [args..]
+npx clibe <lib-name> [command] [args..]
 ```
-or
+for example   
 ```bash
-clitron --libName 'lib-name' -c 'some-command' -a 'args' 'for' 'command'
+clibe 'lib-name' 'some-command' 'args' 'for' 'command'
 ```
-
 
 # example
 ```bash
-npx clitron 'gradient-string' 'teen' 'HELLO WORLD'
+npx clibe 'gradient-string' 'teen' 'HELLO WORLD'
 ```
 
 ![](./hello.png)

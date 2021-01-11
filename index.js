@@ -14,9 +14,9 @@ yargs
                 const lib = require(argv.libName);
                 let result = '';
                 if (argv.async) {
-                    result = argv.args ? await lib[argv.command](...argv.args) : await lib[argv.command]();
+                    result = argv.args ? await lib[argv.command](...argv.args) : await lib[argv.command](...argv.args);
                 } else {
-                    result = argv.args ? lib[argv.command](...argv.args) : lib[argv.command]();
+                    result = argv.args ? lib[argv.command](...argv.args) : lib[argv.command](...argv.args);
                 }
                 console.log(result);
             } catch (error) {
@@ -29,7 +29,7 @@ yargs
         })
     .example("$0 gradient-string 'summer' 'HELLO WORLD'")
     .option('command', { alias: 'c', type: 'string', desc: 'command to run' })
-    .option('args', { alias: 'a', type: 'array', desc: 'arguments for command' })
+    .option('args', { alias: 'a', type: 'string', desc: 'arguments for command' })
     .option('async', { alias: 's', type: 'boolean', desc: 'await command' })
     .help()
     .wrap(90)
