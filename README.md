@@ -7,7 +7,6 @@ npm install clibe -g
 ```
 or see usage below for running with `npx`
 
-
 # usage
 ```bash
 npx clibe <lib-name> [command] [args..]
