@@ -9,21 +9,20 @@ yargs
         { },
         async argv => {
             try {
-                if (!argv.libName) throw 'no lib provided. run any-cli <lib-name>';
+                if (!argv.libName) throw 'no lib provided. run clibe --help for api reference';
                 await execute(`npm install ${argv.libName}`, {cwd: __dirname});
                 const lib = require(argv.libName);
                 const args = argv.args.length > 0 ? argv.args : argv.arguments;
                 const init = argv.init;
                 const initArgs = argv.initArgs ? argv.initArgs.map(a => a.toString()) : [];
                 const library = init ? (initArgs ? lib(initArgs) : lib()) : lib;
-
-                let result = '';
                 if (argv.async) {
-                    result = argv.command ? await library[argv.command](...args) : await library(...args);
+                    const result = argv.command ? await library[argv.command](...args) : await library(...args);
+                    console.log(result)
                 } else {
-                    result = argv.command ? library[argv.command](...args) : library(...args);
+                    const result = argv.command ? library[argv.command](...args) : library(...args);
+                    console.log(result);
                 }
-                console.log(result);
             } catch (error) {
                 if (error.message.includes('library[argv.command] is not a function')) {
                     console.log(`\x1b[31;1mcommand passed to \x1b[0;2m${argv.libName}\x1b[0m \x1b[31;1mdoes not exist\x1b[0m`)
