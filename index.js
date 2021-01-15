@@ -12,9 +12,9 @@ yargs
                 if (!argv.libName) throw 'no lib provided. run clibe --help for api reference';
                 await execute(`npm install ${argv.libName}`, {cwd: __dirname});
                 const lib = require(argv.libName);
-                const args = argv.args.length > 0 ? argv.args : argv.arguments;
+                const args = argv.args.length > 0 ? argv.args.map(JSON.parse) : argv.arguments.map(JSON.parse);
                 const init = argv.init;
-                const initArgs = argv.initArgs ? argv.initArgs.map(a => a.toString()) : [];
+                const initArgs = argv.initArgs ? argv.initArgs.map(JSON.parse) : [];
                 const library = init ? (initArgs ? lib(initArgs) : lib()) : lib;
                 if (argv.async) {
                     const result = argv.command ? await library[argv.command](...args) : await library(...args);

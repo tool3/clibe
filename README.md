@@ -41,4 +41,12 @@ output:
 January 11th 2021
 ```
 
+## lodash
+```bash
+npx clibe lodash chunk -a '["a", "b", "c", "d"]' 2
+```
+output:   
+```
+[ [ 'a', 'b' ], [ 'c', 'd' ] ]
+```
 ...any other lib you can think of :)
